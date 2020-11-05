@@ -30,6 +30,7 @@ function createWindow() {
         height: height,
         x: x,
         y: y,
+        resizable: false,
         title: "Game",
         autoHideMenuBar: true,
         backgroundColor: "#fff",
