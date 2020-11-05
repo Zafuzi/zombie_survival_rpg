@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "electron-reloader": "^1.0.1",
+        "squids": "^4.6.0"
+    },
+    "devDependencies": {
+        "electron": "^10.1.5"
+    }
+}

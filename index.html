@@ -2,17 +2,27 @@
 <html>
 <head>
 	<title> Zombie Survival RPG </title>
-	<meta name=viewport content="width=device-width; initial-scale=1.0">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+	<link rel=stylesheet href=local.css>
 </head>
 <body>
 	<header>
-		<h2>Menu and chapter info</h2>
+		<a href="/" id=menu_button>menu</a>
+		<h2 id=chapter_title>Main Menu</h2>
+		<a href="/" id=quit_button>quit</a>
 	</header>
 	<main>
 		<h2>Main Game Info</h2>
 	</main>
 	<footer>
-		<h2>Info about the player here</h2>
+		<p id=health>HP: 100</p>
+		<p>|</p>
+		<p id=xp>XP: 0</p>
+		<p>|</p>
+		<p id=time>00:00:00</p>
 	</footer>
+	<script src=textfit.min.js></script>
+	<script src=local.js></script>
 </body>
 </html>

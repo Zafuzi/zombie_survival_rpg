@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #282C34;
+    color: #fff;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 24px 1fr 24px;
+}
+
+/* Header is split in three columns */
+header {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    height: 24px;
+    width: 100vw;
+}
+
+header a {
+    color: #FFD772;
+}
+
+header #menu_button {
+    margin-left: 10px;
+}
+
+header #chapter_title {
+    text-align: center;
+    word-wrap: nowrap;
+}
+
+header #quit_button {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    height: 24px;
+    width: 100vw;
+}
+
+footer #health {
+    color: #FF7171;
+}
+
+footer #xp {
+    color: #FFE08F;
+}
+
+footer p {
+    margin-right: 10px;
+}
