@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body, html {
@@ -36,7 +37,7 @@ header #menu_button {
     margin-left: 10px;
 }
 
-header #chapter_title {
+header #room_title {
     text-align: center;
     font-size: inherit;
 }
