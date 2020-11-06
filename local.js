@@ -1,16 +1,25 @@
-let _time, _quit, _menu,
+// _<el> is a document element
+let _time, _quit, _menu, _main, _canvas, ctx,
     game_time = [9,0,0]; // game starts at 9AM
 
-let running = false;
+let running = true, t = 0;
 
 addEventListener("DOMContentLoaded", dcl => {
     _time = document.querySelector("#time");
+    _main = document.querySelector("main");
+    _canvas = document.querySelector("canvas");
+    _canvas.width = _main.getBoundingClientRect().width;
+    _canvas.height = _main.getBoundingClientRect().height;
+
+    ctx = _canvas.getContext("2d");
 
     render_time();
-    setInterval(tick, 1000);
+    requestAnimationFrame(tick);
 });
 
 addEventListener("resize", () => {
+    _canvas.width = _main.getBoundingClientRect().width;
+    _canvas.height = _main.getBoundingClientRect().height;
 });
 
 function render_time() {
@@ -43,6 +52,12 @@ function render_time() {
 
 let tick = function() {
     if(!running) return;
-    game_time[2] += 1;
-    render_time();
+    t++
+    ctx.clearRect(0, 0, _canvas.width, _canvas.height);
+    ctx.fillRect(0, 0, _canvas.width, _canvas.height);
+    if(t % 100 == 0) {
+        game_time[2] += 1;
+        render_time();
+    }
+    requestAnimationFrame(tick);
 }
