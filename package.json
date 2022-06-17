@@ -4,6 +4,6 @@
         "squids": "^4.6.0"
     },
     "devDependencies": {
-        "electron": "^10.1.5"
+        "electron": "^15.5.5"
     }
 }
